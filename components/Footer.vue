@@ -5,7 +5,7 @@
     <h3>{{title}}</h3>
     <p>{{time}}</p>
     <p>京ICP备18008417号</p>
-    <p>烂樱桃电影旨在为大家分享有趣的电影,若无意中侵犯了您的版权所有,我们将立即删除相关内容</p>
+    <p>烂樱桃电影内容均来自互联网,若无意中侵犯了您的版权所有,我们将立即删除相关内容</p>
     <p>我们鼓励大家付费购买正版，有任何问题可以点击下面联系我们</p>
     <p><a :href="email" target="_blank">{{connect}}</a>|
       <a href="#" target="_blank">{{feedback}}</a></p>
@@ -41,9 +41,10 @@ export default {
 .footer{
   height: 190px;
   text-align: center;
-  margin-top: 10%;
+  
   border-top: solid 1px #e6e6e6;
   color:#606266;
+  line-height: 30px;
 }
 .footer a{
   text-decoration: none;

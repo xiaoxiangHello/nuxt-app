@@ -109,8 +109,11 @@
       </el-container>
 
     </el-container>
-
+    <div>
+      {{testMsg}}
+    </div>
   </div>
+  
 </template>
 
 <script>
@@ -124,20 +127,16 @@ import Search from '@/components/Search.vue'
 import API from '@/components/api/index.js'
 import Comment from '@/components/Comment.vue'
 import Location from '@/components/Location.vue'
+import axios from '~/plugins/axios'
 
 export default {
-  async asyncData({ params }) {
-    // We can use async/await ES6 feature
-    this.$jsonp(API.GETMOVIE,
-          {
-            id:params.id,
-          }
-        ).then(json => {
-            var data = json;
-        }).catch(err => {
-
-        })
-    return { post: data }
+ 
+  async asyncData({}) {
+    return axios.getMovie()
+      .then((res) => {
+        console.log(res);
+          return {testMsg: res.data}
+      })
   },
   name: 'id',
   components: {
@@ -229,9 +228,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  width: 90%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
+  max-width: 1100px;
 }
 .search{
   width: 96%;

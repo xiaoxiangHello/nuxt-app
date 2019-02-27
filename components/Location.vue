@@ -1,7 +1,7 @@
 <template>
   <el-row  :gutter="20" >
-    <el-col :span="8" v-for="(item, index) in tags"  :key="index" style="margin-top:8px;">
-        <router-link :to="{path:'/ShowList/pos/'+item.loc+'/p/1'}" target="_blank">
+    <el-col :span="8" v-for="(item, index) in tags"  :key="index" style="margin-top:12px;">
+        <router-link :to="{path:'/ShowList/pos/'+item.loc+'/p/1'}" target="_blank " style="color:#333;">
           {{item.loc}}
         </router-link>
     </el-col>
@@ -71,5 +71,7 @@ export default {
     text-decoration: none;
     color:#333;
   }
-
+  .el-col .el-col-8 a{
+    color:#333;
+  }
 </style>

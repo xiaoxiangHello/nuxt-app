@@ -1,7 +1,7 @@
 <template>
-  <el-row :gutter="24" class="row">
+  <el-row :gutter="24" class="row" style="margin-top:30px;">
 
-    <div v-for="(item,key) in items">
+    <div v-for="(item,key) in items" style="height:70px;width:100%;font-size:15px;">
       <router-link :to="{path:'/home/index/details/id/'+item.id}" target="_blank">
     <el-col :span="20" >
       <p>
@@ -11,7 +11,7 @@
           <span>[{{item.title}}]</span>
         </a>
       </p>
-      <p style="margin-left:22px;color:#333;">
+      <p style="margin-left:26px;color:#333;">
         [{{item.show_time}}][{{item.location}}]
       </p>
     </el-col>

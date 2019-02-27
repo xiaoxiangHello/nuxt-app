@@ -7,8 +7,8 @@
       </el-col>
       <el-col :span="14" style="height:170px;text-align:left;overflow:hidden;white-space:nowrap;">
         <h5 style="margin-top:15px;">{{item.title}}</h5>
-        <p>{{item.director}}</p>
-        <p>{{item.location}}</p>
+        <p style="margin-top:10px;">{{item.director}}</p>
+        <p style="margin-top:10px;">{{item.location}}</p>
         <p>{{item.show_time}}</p>
       </el-col>
     </router-link>
@@ -71,6 +71,7 @@ export default {
   }
   .row{
     text-align:center;
+    margin-top:14px;
   }
   .row a{
     text-decoration: none;

@@ -108,11 +108,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   width: 70%;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
 }
 .search{
-  width: 60%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -161,5 +162,8 @@ export default {
 .aside-3 a{
   text-decoration: none;
 }
-
+.el-col-6{
+  height:260px;
+  max-width: 180px;
+}
 </style>

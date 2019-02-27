@@ -1,14 +1,14 @@
 <template>
-  <el-row :gutter="24" class="row">
-    <div v-for="(item,key) in items">
+  <el-row :gutter="24" class="row" style="margin-top:30px;">
+    <div v-for="(item,key) in items" style="height:70px;width:100%;font-size:15px;">
       <router-link :to="{path:'/home/index/details/id/'+item.id}" target="_blank">
     <el-col :span="20" style="color:#333;">
       <p>
-          <span style="font-size:20px;weight:blod;padding-right:10px;color:red;" v-if="item.rank < 6">{{item.rank}}</span>
-          <span style="font-size:20px;weight:blod;padding-right:10px;" v-else>{{item.rank}}</span>
-          <span>[{{item.title}}]</span>
+          <span style="font-size:20px;weight:blod;padding-right:10px;color:red;line-height:20px;" v-if="item.rank < 6">{{item.rank}}</span>
+          <span style="font-size:20px;weight:blod;padding-right:10px;line-height:20px;" v-else>{{item.rank}}</span>
+          <span style="line-height:20px;">[{{item.title}}]</span>
       </p>
-      <p style="margin-left:22px;">
+      <p style="margin-left:26px;">
         [{{item.show_time}}][{{item.location}}]
       </p>
     </el-col>
